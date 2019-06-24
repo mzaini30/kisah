@@ -9,7 +9,8 @@ class Pembaca extends CI_Controller {
 	public function beranda(){
 		$judul = 'Beranda';
 		$isi = 'pembaca/beranda';
-		$this->load->view('template/default', compact('judul', 'isi'));
+		$data = $this->db->order_by('id', 'DESC')->get('kisah')->result();
+		$this->load->view('template/default', compact('judul', 'isi', 'data'));
 	}
 
 	public function blank(){
@@ -24,9 +25,14 @@ class Pembaca extends CI_Controller {
 			$this->blank();
 		} else {
 			$ambil_data = $this->db->get_where('akun', compact('username'))->result()[0];
+			$data = $this->db->order_by('id', 'DESC')->get_where('kisah', compact('username'))->result();
 			$judul = 'Kisah oleh ' . $ambil_data->nama_panggilan;
 			$isi = 'pembaca/kisah';
-			$this->load->view('template/default', compact('judul', 'isi'));	
+			$this->load->view('template/default', compact('judul', 'isi', 'data'));	
 		}
+	}
+
+	public function cek(){
+		phpinfo();
 	}
 }

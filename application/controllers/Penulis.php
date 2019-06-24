@@ -23,15 +23,18 @@ class Penulis extends CI_Controller {
 		} else {
 			$data = (object) $this->input->post();
 			$data->username = $this->session->userdata('username');
-			$gambar = '';
+			$data->waktu_dibuat = date('Y-m-d H:i:s');
+			$data->gambar_kisah = '';
 			$this->upload->initialize(array(
-				'upload_path' => './aset/gambar roti',
+				'upload_path' => './aset/gambar',
 				'allowed_types' => 'gif|jpg|png|jpeg',
 				'encrypt_name' => TRUE
 			));
-			if ($this->upload->do_upload('gambar')){
-				$gambar = $this->upload->data()['file_name'];
+			if ($this->upload->do_upload('gambar_kisah')){
+				$data->gambar_kisah = $this->upload->data()['file_name'];
 			}
+			$this->db->insert('kisah', $data);
+			redirect(base_url() . 'kisah/' . $this->session->userdata('username'));
 		}
 	}
 }

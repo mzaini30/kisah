@@ -1,0 +1,36 @@
+img {
+	max-width: 100%;
+}
+
+.isi-kisah {
+	column-count: 3;
+}
+
+.list-kisah {
+    display:table;
+    width: 100%;
+}
+
+.list-kisah .panel-body {
+	padding: 0;
+}
+
+.list-kisah .panel-body img {
+	width: 100%;
+}
+
+.waktu:first-letter {
+	text-transform: uppercase;
+}
+
+@media (max-width: 768px){
+	.isi-kisah {
+		column-count: 2;
+	}	
+}
+
+@media (max-width: 480px){
+	.isi-kisah {
+		column-count: 1;
+	}	
+}

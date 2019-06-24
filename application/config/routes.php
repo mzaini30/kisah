@@ -54,6 +54,7 @@ $route['404_override'] = 'pembaca/blank';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['buat-kisah'] = 'penulis/buat_kisah';
+$route['cek'] = 'pembaca/cek';
 $route['daftar'] = 'login/daftar';
 $route['keluar'] = 'login/keluar';
 $route['kisah/(:any)'] = 'pembaca/kisah/$1';

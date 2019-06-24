@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-sm-9">
-		<form method="post">
+		<form method="post" enctype="multipart/form-data">
 			<div class="form-group">
 				<label for="">Judul Kisah</label>
 				<input type="text" class="form-control" name="judul_kisah" required="">
@@ -10,7 +10,7 @@
 				<label for="">Cover</label>
 				<div id="image-preview">
 					<label for="image-upload" id="image-label">Pilih Gambar</label>
-					<input type="file" name="gambar" id="image-upload" required="" />
+					<input type="file" name="gambar_kisah" id="image-upload" required="" />
 				</div>
 			</div>
 			<div class="form-group">
