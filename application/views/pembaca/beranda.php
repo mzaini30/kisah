@@ -6,7 +6,7 @@
 		<div class="isi-kisah">
 			<?php foreach($data as $d): ?>
 				<div class="panel panel-default list-kisah">
-					<div class="panel-heading"><?= $d->judul_kisah ?></div>
+					<div class="panel-heading"><strong><?= $d->judul_kisah ?></strong> oleh <?= $d->username ?></div>
 					<div class="panel-body">
 						<img src="<?= base_url() ?>index.php/img/<?= $d->gambar_kisah ?>?w=300&h=400">
 					</div>
