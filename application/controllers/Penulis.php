@@ -23,6 +23,15 @@ class Penulis extends CI_Controller {
 		} else {
 			$data = (object) $this->input->post();
 			$data->username = $this->session->userdata('username');
+			$gambar = '';
+			$this->upload->initialize(array(
+				'upload_path' => './aset/gambar roti',
+				'allowed_types' => 'gif|jpg|png|jpeg',
+				'encrypt_name' => TRUE
+			));
+			if ($this->upload->do_upload('gambar')){
+				$gambar = $this->upload->data()['file_name'];
+			}
 		}
 	}
 }

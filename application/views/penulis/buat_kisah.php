@@ -7,6 +7,13 @@
 			</div>
 			<!-- gambar kisah -->
 			<div class="form-group">
+				<label for="">Cover</label>
+				<div id="image-preview">
+					<label for="image-upload" id="image-label">Pilih Gambar</label>
+					<input type="file" name="gambar" id="image-upload" required="" />
+				</div>
+			</div>
+			<div class="form-group">
 				<input type="submit" class="btn btn-success" value="Buat">
 			</div>
 		</form>
