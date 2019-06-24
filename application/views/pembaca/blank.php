@@ -1,0 +1,1 @@
+<p>Wah, yang kamu cari nggak ketemu! <a href="<?= base_url() ?>">Kembali ke beranda.</a></p>
