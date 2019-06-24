@@ -13,7 +13,7 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">Kisah</div>
 		<div class="list-group">
-			<a href="#!" class="list-group-item">Buat Kisah</a>
+			<a href="<?= base_url() ?>buat-kisah" class="list-group-item">Buat Kisah</a>
 			<a href="<?= base_url() ?>kisah/<?= $this->session->userdata('username') ?>" class="list-group-item">Kisah-ku</a>
 		</div>
 	</div>

@@ -53,8 +53,8 @@ $route['default_controller'] = 'pembaca';
 $route['404_override'] = 'pembaca/blank';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['buat-kisah'] = 'penulis/buat_kisah';
 $route['daftar'] = 'login/daftar';
 $route['keluar'] = 'login/keluar';
-$route['login'] = 'login/masuk';
-
 $route['kisah/(:any)'] = 'pembaca/kisah/$1';
+$route['login'] = 'login/masuk';
