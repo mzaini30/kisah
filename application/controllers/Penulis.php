@@ -24,6 +24,7 @@ class Penulis extends CI_Controller {
 			$data = (object) $this->input->post();
 			$data->username = $this->session->userdata('username');
 			$data->waktu_dibuat = date('Y-m-d H:i:s');
+			$data->slug = slug($data->judul_kisah);
 			$data->gambar_kisah = '';
 			$this->upload->initialize(array(
 				'upload_path' => './aset/gambar',

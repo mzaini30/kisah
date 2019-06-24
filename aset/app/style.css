@@ -23,6 +23,15 @@ img {
 	text-transform: uppercase;
 }
 
+.bukan-link,
+.bukan-link:hover,
+.bukan-link:active,
+.bukan-link:focus,
+.bukan-link:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
 @media (max-width: 768px){
 	.isi-kisah {
 		column-count: 2;
